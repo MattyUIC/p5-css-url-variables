@@ -2,6 +2,14 @@
 let clr = 'red';
 let clr_input;
 let num_input; 
+
+
+let img;
+
+function preload(){
+  img = loadImage("img/ticket.png");
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
@@ -21,7 +29,7 @@ function setup() {
 }
 
 function draw() {
- 
+  image(img, mouseX + width/15, mouseY + height/15, width, height)
   stroke('red');
   line(random(width), random(height), random(width), random(height));
   //on button press
